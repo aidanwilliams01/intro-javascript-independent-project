@@ -2,6 +2,7 @@ function onPageLoad() {
   let form = document.querySelector("form");
   function formSubmission(event) {
     event.preventDefault();
+    const name = document.querySelector("input#name").value;
     const q1 = document.querySelector("input[name='q1']:checked").value;
     const q2 = document.querySelector("input[name='q2']:checked").value;
     const q3 = document.querySelector("input[name='q3']:checked").value;
@@ -56,13 +57,13 @@ function onPageLoad() {
       a3 = a3 + 1;
     }
     if (a1 >= a2 && a1 >= a3) {
-      document.querySelector("p").innerText = "Coding language 1";
+      document.querySelector("p").innerText = name + ", you should study Coding language 1.";
     }
     else if (a2 > a1 && a2 >= a3) {
-      document.querySelector("p").innerText = "Coding language 2";
+      document.querySelector("p").innerText = name + ", you should Coding language 2.";
     }
     else {
-      document.querySelector("p").innerText = "Coding language 3";
+      document.querySelector("p").innerText = name + ", you should study Coding language 3.";
     }
   }
   form.addEventListener("submit", formSubmission);
