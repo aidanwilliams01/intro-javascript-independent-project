@@ -18,54 +18,24 @@ function onPageLoad() {
       let a1 = 0;
       let a2 = 0;
       let a3 = 0;
-      if (q1 === "Answer 1") {
-        a1 = 1;
-      }
-      else if (q1 === "Answer 2") {
-        a2 = 1;
-      }
-      else {
-        a3 = 1;
-      }
-      if (q2 === "Answer 1") {
-        a1 = a1 + 1;
-      }
-      else if (q2 === "Answer 2") {
-        a2 = a2 + 1;
-      }
-      else {
-        a3 = a3 + 1;
-      }
-      if (q3 === "Answer 1") {
-        a1 = a1 + 1;
-      }
-      else if (q3 === "Answer 2") {
-        a2 = a2 + 1;
-      }
-      else {
-        a3 = a3 + 1;
-      }
-      if (q4 === "Answer 1") {
-        a1 = a1 + 1;
-      }
-      else if (q4 === "Answer 2") {
-        a2 = a2 + 1;
-      }
-      else {
-        a3 = a3 + 1;
-      }
-      if (q5 === "Answer 1") {
-        a1 = a1 + 1;
-      }
-      else if (q5 === "Answer 2") {
-        a2 = a2 + 1;
-      }
-      else {
-        a3 = a3 + 1;
-      }
+      q1 === "Answer 1" ? a1 = 1
+      : q1 === "Answer 2" ? a2 = 1
+      : a3 = 1;
+      q2 === "Answer 1" ? a1 = a1 + 1
+      : q2 === "Answer 2" ? a2 = a2 + 1
+      : a3 = a3 + 1;
+      q3 === "Answer 1" ? a1 = a1 + 1
+      : q3 === "Answer 2" ? a2 = a2 + 1
+      : a3 = a3 + 1;
+      q4 === "Answer 1" ? a1 = a1 + 1
+      : q4 === "Answer 2" ? a2 = a2 + 1
+      : a3 = a3 + 1;
+      q5 === "Answer 1" ? a1 = a1 + 1
+      : q5 === "Answer 2" ? a2 = a2 + 1
+      : a3 = a3 + 1;
       document.querySelector("p").innerText = a1 >= a2 && a1 >= a3 ? `${name}, you should study Coding language 1.`
       : a2 > a1 && a2 >= a3 ? `${name}, you should study Coding language 2.`
-      : `${name}, you should study Coding language 3.`
+      : `${name}, you should study Coding language 3.`;
     }
   }
   form.addEventListener("submit", formSubmission);
