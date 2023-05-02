@@ -33,9 +33,9 @@ function onPageLoad() {
       q5 === "Answer 1" ? a1 = a1 + 1
       : q5 === "Answer 2" ? a2 = a2 + 1
       : a3 = a3 + 1;
-      document.querySelector("p").innerText = a1 >= a2 && a1 >= a3 ? `${name}, you should study Coding language 1.`
-      : a2 > a1 && a2 >= a3 ? `${name}, you should study Coding language 2.`
-      : `${name}, you should study Coding language 3.`;
+      document.querySelector("p").innerText = a1 >= a2 && a1 >= a3 ? `${name}, you should study Ruby.`
+      : a2 > a1 && a2 >= a3 ? `${name}, you should study C#.`
+      : `${name}, you should study Javascript.`;
     }
   }
   form.addEventListener("submit", formSubmission);
